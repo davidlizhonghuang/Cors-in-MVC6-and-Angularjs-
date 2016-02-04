@@ -45,8 +45,8 @@ enable the "cross domain allow origin":*, we can simply update the startup.cs fi
 }
 
 That is it. this resource is ready to be accessed by cross domain clients. However, Clients needs to have
-a correect header before they can be allowed to access this resource. We use Angular JS client http service 
-to call this resource,we need to add some headers in angular http service.  
+a correct header before they can be allowed to access this resource. We use Angular JS client http service 
+to call this resource, we need to add some headers in angular http service.  
 
 Cors in Angular JS (origin)
 
@@ -64,7 +64,7 @@ It is simple to configure the $http service in angular js as Cors enabled as bel
 
 when we do http.post call, server side will do the preflight check, we can reset headers to ignore this check 
 and then give the correct content type to header, post normally means we need to submit the data in html form 
-to server, the content typevshould be the 'application/x-www-form-urlencoded', it can not be the 'applcaiton/json'
+to server, the content type should be the 'application/x-www-form-urlencoded', it can not be the 'applcaiton/json'
 or it will be fail to do cross domain call.
 
 After we get the correct content type for header,  we use example method below in angular js to call this resource
